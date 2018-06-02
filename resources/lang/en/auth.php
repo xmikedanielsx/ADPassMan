@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
+    'failed' => 'You must be in the Password Managers Group. <br> Or your credentials are incorrect',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];

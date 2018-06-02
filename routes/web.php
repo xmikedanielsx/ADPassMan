@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//    return view('welcome');
+    return redirect()->route('login');
 });
+
+Route::get('/home', function(){return redirect()->route('passwords.index');})->name('home');
+
+Route::get('/test','TestController@index')->name('test');
+
+Auth::routes();
+
+Route::resource('passwords', 'PasswordController');
