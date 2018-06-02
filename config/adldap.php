@@ -14,7 +14,7 @@ return [
     | an array of configuration settings.
     |
     */
-
+    'groupFilter' => env('ADLDAP_GROUP_FILTER', 'passwordManagers'),
     'connections' => [
 
         'default' => [

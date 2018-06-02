@@ -14,6 +14,6 @@ class passwordManagersOnly extends Rule
      */
     public function isValid()
     {
-        return $this->user->inGroup(env('LDAP_GROUP_FILTER', 'NGM-SysAdmins'));
+        return $this->user->inGroup(\Config::get('adldap.groupFilter'));
     }
 }
