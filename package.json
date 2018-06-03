@@ -19,6 +19,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "bootbox": "^4.4.0"
+        "bootbox": "^4.4.0",
+        "bootstrap-notify": "^3.1.3"
     }
 }

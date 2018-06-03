@@ -22,3 +22,4 @@ const app = new Vue({
 });
 
 window.bootbox = require('bootbox');
+require('bootstrap-notify');

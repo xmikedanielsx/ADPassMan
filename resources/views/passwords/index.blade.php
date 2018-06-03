@@ -89,7 +89,29 @@
 
             bootbox.confirm({'message':'Remove '+iname,'callback':function(result){
                     if(result){
-                        row.remove();
+                        var durl = '{{route('passwords.destroy',':id')}}';
+                        durl = durl.replace(':id',iid);
+                        axios.delete(durl, {
+                            'data' : {
+                                'id': iid
+                            }
+                        }).then(function(){
+                            /*
+                            * TODO: Add Validation to see if it succeeded or not and notify accordingly
+                            * Date: 06.154.2018 12:29:41
+                            * Assigned: 
+                            * Priority: Normal
+                            */
+                            $.notify({
+                                // options
+                                message: 'Successfully deleted ' + iname
+                            },{
+                                // settings
+                                type: 'success'
+                            });
+                            row.remove();
+                        });
+
                     }
 
                     }, buttons: {

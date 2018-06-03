@@ -99,6 +99,9 @@ class PasswordController extends Controller
      */
     public function destroy($id)
     {
-        //
+        \App\Password::findOrFail($id)->delete();
+        return response()->json([
+           'status' => 'Ok'
+        ]);
     }
 }
