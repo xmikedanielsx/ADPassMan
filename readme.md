@@ -14,7 +14,7 @@ All you need to do to install it.
 - `touch databbas/database.sqlite`
 - `php artisan migrate`
 - Once you have migrated you need to create an AD Group on your Active Diretory server <br> This group willl be known as `passwordManagers`
-- Note you can change this the `passwordManagersOnly.php` under `App\Rules`. 
+- Note you can change this in the .env `ADLDAP_GROUP_FILTER`.
 - You can also create other rules. Check [ADLDAP2](https://github.com/Adldap2/Adldap2-Laravel) for more documentation
 
 ## Credits
